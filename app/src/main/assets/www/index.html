@@ -10,12 +10,24 @@
 </head>
 <body>
     <h1>This is WebView</h1>
-    <a href="./sub01.html">sub01.html</a>
+    <a href="./sub01.html">sub01.html(local)</a>
+    <a href="http://google.com">google(http)</a>
     <ul>
         <li><a href='tel:010-123-1234'>Click here to call</a></li>
         <li><a href='sms:010-123-1234'>Click here to message</a></li>
         <li><a href='mailto:tailofmoon@naver.com'>Click here to mail</a></li>
         <li><a href='geo:51.5074,0.1278'>Click here to show location</a></li>
+        <li><input type="text" id="text_input" placeholder="input any text"></li>
     </ul>
+
+    <button id="btn">click</button>
+    <button onclick="showAndroidToast('Hello Android!')">android api</button>
+
+    <script>
+        function showAndroidToast(toast) {
+            Android.showToast(toast)
+        }
+    </script>
+    <script src="./main.js"></script>
 </body>
 </html>
